@@ -1,0 +1,214 @@
+:root {
+	--clr-accent-400: hsl(5, 85%, 63%);
+	--clr-accent-300: hsl(35, 77%, 62%);
+	--clr-accent-200: #ffcc80;
+	--clr-primary-600: hsl(236, 13%, 42%);
+	--clr-primary-300: hsl(233, 8%, 79%);
+	--clr-primary-200: hsl(36, 100%, 99%);
+	--clr-primary-100: #f9faf8;
+	--clr-neutral-800: hsl(240, 100%, 5%);
+	--size-100: 0.25rem;
+	--size-200: 0.625rem; /* 10px */
+	--size-300: 1rem;
+	--size-400: 1.125rem; /* 18px */
+	--size-500: 1.5rem; /* 24px */
+	--size-600: 2.25rem; /* 36px */
+	--size-700: 3rem; /* 48px */
+	--size-800: 4rem;
+	--size-900: 9.375rem; /* 150px */
+	--fs-400: 0.875rem;
+	--fs-500: 1.125rem; /* 18px */
+	--fs-600: 1.5rem; /* 24px */
+	--fs-700: 2.25rem; /* 36px */
+	--fs-800: 3rem; /* 48px */
+	--br-100: 5px;
+	--br-200: 10px;
+	--ff-primary: "Inter", sans-serif;
+	--ff-heading: "Fraunces", serif;
+	--fw-light: 300;
+	--fw-regular: 400;
+	--fw-bold: 700;
+	--fs-body: var(--fs-400);
+	--fs-primary-header: var(--fs-800);
+}
+
+/* -------------------- */
+/* ------CSS RESET----- */
+/* -------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+/* Set core body defaults */
+
+body {
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+
+img,
+picture,
+svg {
+	max-width: 100%;
+	display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* -------------------- */
+/* -------------------- */
+/* -------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+body {
+	font-family: var(--ff-primary);
+	max-width: max-content;
+	margin: auto;
+}
+header {
+	margin: 2rem 0;
+	display: flex;
+}
+
+nav {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: end;
+}
+
+a {
+	text-decoration: none;
+	color: var(--clr-primary-600);
+}
+
+main {
+	display: flex;
+	border: 1px solid rebeccapurple;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+.body {
+	margin-top: 3rem;
+	max-width: 1440px;
+}
+
+.menu > ul {
+	display: flex;
+}
+
+.menu-list > li {
+	padding: 20px;
+}
+
+.logo {
+	align-self: self-end;
+	width: 70px;
+	height: 50px;
+	background-image: url("./assets/images/logo.svg");
+	background-repeat: no-repeat;
+}
+.main-img {
+	align-self: self-end;
+	width: 75vh;
+	height: 30vh;
+	background-image: url("./assets/images/image-web-3-desktop.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.main-title {
+	display: block;
+	font-size: var(--fs-800);
+	font-weight: 800;
+}
+.highlight {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 3;
+	width: 100%;
+}
+.main-img {
+	width: 100%;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+
+.main-title {
+	width: 450px;
+	grid-column-start: 1;
+	grid-row-start: 3;
+	grid-row-end: 5;
+}
+.article {
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 400px;
+}
